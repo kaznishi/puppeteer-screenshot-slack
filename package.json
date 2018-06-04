@@ -1,0 +1,15 @@
+{
+  "name": "puppeteer-screenshot-slack",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaznishi/puppeteer-screenshot-slack.git"
+  },
+  "author": "kaznishi <kaz.nishimu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.4.0",
+    "request": "^2.87.0"
+  }
+}
