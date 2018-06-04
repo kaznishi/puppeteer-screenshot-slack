@@ -3,7 +3,7 @@ const request = require('request');
 const puppeteer = require('puppeteer');
 
 // For puppeteer
-const TARGET_URL = (process.env.URL === undefined) ? 'http://example.com' : process.env.URL;
+const TARGET_URL = (process.argv[2] === undefined) ? 'http://example.com' : process.argv[2];
 const FILE_NAME = (process.env.FILE_NAME === undefined) ? 'image.png' : process.env.FILE_NAME;
 const PAGE_WIDTH = (process.env.WIDTH === undefined) ? 1280 : Number(process.env.WIDTH);
 const PAGE_HEIGHT = (process.env.HEIGHT === undefined) ? 720 : Number(process.env.HEIGHT);
