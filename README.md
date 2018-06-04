@@ -1,7 +1,7 @@
 ## Setting
 
 ```
-$ docker build puppeteer-screenshot-slack .
+$ docker build -t puppeteer-screenshot-slack .
 ```
 
 ## USAGE
