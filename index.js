@@ -13,6 +13,7 @@ const PAGE_WAIT = (process.env.WAIT === undefined) ? 0 : Number(process.env.WAIT
 const API_URL = 'https://slack.com/api/files.upload';
 const SLACK_BOT_TOKEN = (process.env.BOT_TOKEN === undefined) ? "DUMMYTOKEN" : process.env.BOT_TOKEN;
 const SLACK_CHANNEL = (process.env.CHANNEL === undefined) ? "DUMMYTOKEN" : process.env.CHANNEL;
+const SLACK_COMMENT = (process.argv[3] === undefined) ? '' : process.argv[3];
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -41,6 +42,9 @@ const SLACK_CHANNEL = (process.env.CHANNEL === undefined) ? "DUMMYTOKEN" : proce
       channels: SLACK_CHANNEL
     }
   };
+  if (SLACK_COMMENT != '') {
+    data['formData']['initial_comment'] = SLACK_COMMENT;
+  }
   request.post(data, function(error, response, body) {
       if (!error && response.statusCode == 200) {
           console.log('Success!!!');

@@ -7,7 +7,7 @@ $ docker build -t puppeteer-screenshot-slack .
 ## USAGE
 
 ```
-$ docker run --rm -e BOT_TOKEN=[slack bot token] -e CHANNEL=[channel name] puppeteer-screenshot-slack [target URL]
+$ docker run --rm -e BOT_TOKEN=[slack bot token] -e CHANNEL=[channel name] puppeteer-screenshot-slack [target URL] [(optional) comment]
 ```
 
 Example
@@ -26,5 +26,7 @@ WAIT : URL遷移後にスクリーンショットを撮るまでの待ち時間(
 Example
 
 ```
-$ docker run --rm -e BOT_TOKEN=xoxb-xxxxxxx-xxxxxxxxx -e CHANNEL=xxxxxxxxx -e FILE_NAME=hogehoge.png -e WIDTH=800 -e HEIGHT=360 -e WAIT=5000 puppeteer-screenshot-slack http://example.com
+$ docker run --rm -e BOT_TOKEN=xoxb-xxxxxxx-xxxxxxxxx -e CHANNEL=xxxxxxxxx -e FILE_NAME=hogehoge.png -e WIDTH=800 -e HEIGHT=360 -e WAIT=5000 puppeteer-screenshot-slack http://example.com "これはコメントです"
+```
+
 ```
